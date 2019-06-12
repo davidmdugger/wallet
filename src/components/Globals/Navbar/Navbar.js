@@ -33,6 +33,7 @@ class Navbar extends PureComponent {
   insideNavHTML = () => {
     return this.state.isMenuExpanded ? (
       <ul>
+        <FaRegTimesCircle className="close-btn" />
         {routes.map((route, idx) => (
           <Link key={idx} to={route.path}>
             <li>{route.text}</li>
@@ -52,9 +53,6 @@ class Navbar extends PureComponent {
     const menuStyle = this.state.isMenuExpanded ? "big" : "small";
     return (
       <nav onClick={this.toggleMenu} className={menuStyle}>
-        {this.state.isMenuExpanded && (
-          <FaRegTimesCircle className="close-btn" />
-        )}
         {this.insideNavHTML()}
       </nav>
     )

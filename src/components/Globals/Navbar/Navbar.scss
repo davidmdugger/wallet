@@ -4,13 +4,16 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: fixed;
+  top: 5px;
+  left: 5px;
 
   ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100vw;
 
     a {
       text-align: center;
@@ -62,16 +65,13 @@ nav {
   align-items: center;
   width: 50px;
   height: 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
   transition: all .5s;
 }
 
 .big {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   margin-left: 0;
