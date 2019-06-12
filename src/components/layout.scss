@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Lato:400,700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+// COLORS
+$color-gold: #c99963;
+$color-dark-blue: #101d2c;
+$color-dark-grey: #343434;
+$color-eggshell: #e6e6e6;
+
+// FONTS
+$fontText: 'Lato', sans-serif;
+$fontHeading: 'Alfa Slab One', sans-serif;
+
+h1, h2, h3 {
+  font-family: $fontHeading;
+}
+
+p, span, div {
+  font-family: $fontText;
+}

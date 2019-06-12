@@ -5,13 +5,20 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
+import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
-import "./layout.css"
+import Navbar from './Globals/Navbar';
 
-const Layout = ({ children }) => <>{children}</>
+import "./layout.scss"
+
+const Layout = ({ children }) => (
+  <Fragment>
+    <Navbar />
+    {children}
+  </Fragment>
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
