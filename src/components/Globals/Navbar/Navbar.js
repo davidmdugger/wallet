@@ -1,7 +1,8 @@
 import React, { PureComponent, Fragment } from 'react'
 import { Link } from 'gatsby';
+import { FaBars, FaRegTimesCircle } from 'react-icons/fa';
 
-import './Navbar.css';
+import './Navbar.scss';
 
 const routes = [
   {
@@ -31,7 +32,7 @@ class Navbar extends PureComponent {
 
   insideNavHTML = () => {
     return this.state.isMenuExpanded ? (
-      <ul style={{ position: 'relative' }}>
+      <ul>
         {routes.map((route, idx) => (
           <Link key={idx} to={route.path}>
             <li>{route.text}</li>
@@ -39,11 +40,11 @@ class Navbar extends PureComponent {
         ))}
       </ul>
     ) : (
-        <div style={{ color: 'white', width: '100%', height: '100%' }}>
-          <div style={{ width: '100%', height: '100%', borderRadius: '50%', backgroundColor: 'red', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            X
+        <div className="bars-wrapper">
+          <div className="bars-radius">
+            <FaBars />
           </div>
-        </div >
+        </div>
       )
   }
 
@@ -52,7 +53,7 @@ class Navbar extends PureComponent {
     return (
       <nav onClick={this.toggleMenu} className={menuStyle}>
         {this.state.isMenuExpanded && (
-          <span style={{ position: 'absolute', top: '10px', right: '10px', cursor: 'pointer' }}>X</span>
+          <FaRegTimesCircle className="close-btn" />
         )}
         {this.insideNavHTML()}
       </nav>
