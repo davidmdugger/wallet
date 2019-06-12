@@ -1,0 +1,63 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid blue;
+  width: 100%;
+  max-width: 350px;
+
+  .card-header{
+    position: relative;
+    display: flex;
+    border: 1px solid #454545;
+    height: 35px;
+
+    .crypto-logo {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      background-color: red;
+      position: relative;
+      &::after {
+        content: "";
+        background-color: white;
+        border-left: 1px solid red;
+        height: 100%;
+        width: 30px;
+        transform: skewX(-30deg);
+        position: absolute;
+        right: -14px;
+        top: 0;
+      }
+    }
+
+    .crypto-name {
+      flex: 3;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      align-items: center;
+    }
+
+    .info-toggle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 25px;
+      border: 1px solid transparent;
+      background-color: transparent;
+      font-size: 1.1em;
+    }
+
+  }
+  .show {
+    transform-origin: top center;
+    transform: scaleY(1);
+    transition: all 200ms;
+  }
+
+  .hide {
+    transform: scaleY(0)
+  }
+}
