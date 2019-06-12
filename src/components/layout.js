@@ -10,12 +10,14 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Navbar from './Globals/Navbar';
+import HomeHeader from './Globals/HomeHeader';
 
 import "./layout.scss"
 
 const Layout = ({ children }) => (
   <Fragment>
     <Navbar />
+    <HomeHeader logo='logo' siteName="David's Wallet" />
     {children}
   </Fragment>
 )

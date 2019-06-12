@@ -1,0 +1,13 @@
+.home-header {
+  border-bottom: 1px solid #454545;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  .logo {
+    margin: 0 4px
+  }
+  .site-name {
+    margin: 0 4px
+  }
+}
