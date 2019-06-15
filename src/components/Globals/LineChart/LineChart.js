@@ -1,6 +1,8 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment } from 'react'
 import { VictoryLine } from 'victory';
 import moment from 'moment';
+
+import './LineChart.scss';
 
 let count = 0;
 
@@ -57,27 +59,24 @@ class LineChart extends PureComponent {
 
     console.log(newData)
     return (
-      <div style={{ backgroundColor: '#343434', height: '100%', position: 'relative' }}>
-        <span style={{ position: 'absolute', top: '0', left: '2px', color: 'white', fontSize: '.75em' }}>high - ${(max * 1000).toLocaleString()}</span>
-        <span style={{ position: 'absolute', bottom: '0', right: '2px', color: 'white', fontSize: '.75em' }}>low - ${(min * 1000).toLocaleString()}</span>
-        { /* <VictoryChart
-          animate={{ duration: 2000 }}
-          height={150}
-        > */ }
+      <div className="lineChart">
+        <span className="priceCorners">
+          <span className="high">high - ${(max * 1000).toLocaleString()}</span>
+          <span className="low">low - ${(min * 1000).toLocaleString()}</span>
+        </span>
 
         <VictoryLine
-          animate={{ duration: 2000 }}
+          animate={{ duration: 3000 }}
           height={70}
           style={{
-            data: { stroke: "4aff00" },
-            parent: { border: "1px solid gold", height: '70px' },
+            // data: { stroke: "51ff0d" },
           }}
 
           responsive={false}
 
           minDomain={{ y: min, x: 1 }}
           maxDomain={{ y: max, x: 7 }}
-          padding={10}
+          padding={5}
 
           data={newData}
 
