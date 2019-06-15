@@ -8,18 +8,16 @@
 import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 
-import HomeHeader from './Globals/HomeHeader';
+import MainHeader from './Globals/MainHeader';
 import Card from './Globals/Card';
 
 import "./layout.scss"
 
 const Layout = ({ children }) => (
-  <Fragment>
-    <HomeHeader />
-    <h1>David's Wallet</h1>
-    <Card />
+  <div className="layout-container">
+    <MainHeader />
     {children}
-  </Fragment>
+  </div>
 )
 
 Layout.propTypes = {

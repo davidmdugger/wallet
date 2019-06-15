@@ -1,11 +1,13 @@
 import React from 'react'
-import HomeHeader from '../components/Globals/HomeHeader';
+
+import Layout from '../components/layout';
+import MainHeader from '../components/Globals/MainHeader';
 
 export default function reports() {
   return (
-    <div>
-      <HomeHeader />
+    <Layout>
+      <MainHeader />
       <h2>reports</h2>
-    </div>
+    </Layout>
   )
 }
