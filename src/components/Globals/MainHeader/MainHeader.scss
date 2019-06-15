@@ -1,10 +1,15 @@
-@import "../../layout.scss";
+@import "../../../index.scss";
 
-.home-header {
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 80px;
+  height: $header-height;
   background-color: $secondary;
   padding: 0 10px;
   

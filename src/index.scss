@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Lato:400,700&display=swap');
+
+// FONTS
+$font-text: 'Lato', sans-serif;
+$font-heading: 'Alfa Slab One', sans-serif;
+
+// COLORS
+$primary: #E94134;
+
+$secondary: #393F42;
+
+$primary-font-dark: #393f42;
+
+$color-eggshell: #e6e6e6;
+
+$header-height: 80px;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  color: $primary-font-dark;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+h2 {
+  font-size: 4em;
+}
+
+h3 {
+  font-size: 3em;
+}
+
+h1, h2, h3 {
+  font-family: $font-heading;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+}
+
+p, span, div {
+  font-family: $font-text;
+}
+
+$max-width-page: "2200px";
+
+// MEDIA QUERIES
+// smartphone portrait and landscape
+$media-phone: "only screen and (max-width : 320px) and (max-device-width : 480px)";
+
+// ipad potrait
+$media-ipad: "only screen and (max-width : 768px)";
+
+// ipad landscape
+$media-ipad-landscape: "only screen and (max-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)";
+
+// laptop
+$media-laptop: "only screen and (max-width : 768px)";
+
+// desktop
+$media-desktop: "only screen  and (min-width : 1200px)";
+
+// large screens
+$media-large-screen: "only screen  and (min-width : 1824px)";
+
+.default-background {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(blue, red);
+  background-position: center;
+  background-size: cover;
+}
