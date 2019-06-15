@@ -7,9 +7,7 @@
 
 import React, { Fragment } from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
 
-import Navbar from './Globals/Navbar';
 import HomeHeader from './Globals/HomeHeader';
 import Card from './Globals/Card';
 
@@ -17,8 +15,8 @@ import "./layout.scss"
 
 const Layout = ({ children }) => (
   <Fragment>
-    <Navbar />
-    <HomeHeader logo='logo' siteName="David's Wallet" />
+    <HomeHeader />
+    <h1>David's Wallet</h1>
     <Card />
     {children}
   </Fragment>

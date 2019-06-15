@@ -1,13 +1,23 @@
+@import "../../layout.scss";
+
 .home-header {
-  border-bottom: 1px solid #454545;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  height: 70px;
-  .logo {
-    margin: 0 4px
+  height: 80px;
+  background-color: $secondary;
+  padding: 0 10px;
+  
+  @media #{$media-laptop} {
+    .logo, .site-name {
+      display: none;
+    }
+
+    justify-content: flex-end;
   }
-  .site-name {
-    margin: 0 4px
+  
+  .logo, .site-name {
+    margin: 0 4px;
+    color: $color-eggshell;
   }
 }

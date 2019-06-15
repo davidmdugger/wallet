@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Lato:400,700&display=swap');
 
+// FONTS
+$font-text: 'Lato', sans-serif;
+$font-heading: 'Alfa Slab One', sans-serif;
+
+// COLORS
+$primary: #E94134;
+
+$secondary: #393F42;
+
+$primary-font-dark: #393f42;
+
+$color-eggshell: #e6e6e6;
+
 *,
 *::before,
 *::after {
@@ -10,22 +23,40 @@
 
 body {
   font-size: 16px;
+  color: $primary-font-dark;
 }
 
-// COLORS
-$color-gold: #c99963;
-$color-dark-blue: #101d2c;
-$color-dark-grey: #343434;
-$color-eggshell: #e6e6e6;
-
-// FONTS
-$fontText: 'Lato', sans-serif;
-$fontHeading: 'Alfa Slab One', sans-serif;
+h1 {
+  font-size: 5em;
+}
 
 h1, h2, h3 {
-  font-family: $fontHeading;
+  font-family: $font-heading;
+  text-transform: lowercase;
 }
 
 p, span, div {
-  font-family: $fontText;
+  font-family: $font-text;
 }
+
+$max-width-page: "2200px";
+
+// MEDIA QUERIES
+// smartphone portrait and landscape
+$media-phone: "only screen and (max-width : 320px) and (max-device-width : 480px)";
+
+// ipad potrait
+$media-ipad: "only screen and (max-width : 768px)";
+
+// ipad landscape
+$media-ipad-landscape: "only screen and (max-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)";
+
+// laptop
+$media-laptop: "only screen and (max-width : 768px)";
+
+// desktop
+$media-desktop: "only screen  and (min-width : 1200px)";
+
+// large screens
+$media-large-screen: "only screen  and (min-width : 1824px)";
+

@@ -1,0 +1,51 @@
+@import "../../layout.scss";
+
+.lineChart {
+  background-color: $secondary;
+  height: 100%;
+  position: relative;
+
+  .high, .low {
+    position: absolute;
+    color: white;
+    font-size: .75em;
+  }
+
+  .high {
+    top: 0;
+    left: 3px;
+  }
+
+  .low {
+    bottom: 0;
+    right: 3px;
+  }
+
+  @media #{$media-laptop} {
+    .priceCorners {
+      display: none;
+    }
+
+    justify-content: flex-end;
+  }
+
+  // victorys line chart div
+  .VictoryContainer {
+    max-height: 100%;
+
+    path {
+      stroke: #FAED34!important;
+      stroke-width: 3px!important;
+      stroke-linecap: round!important;
+      &::after {
+        background-color:linear-gradient(60deg,#009946,#14ad5a)!important;
+      }
+    }
+  }
+}
+
+@media #{$media-phone} {
+  .lineChart {
+    width: 100%;
+  }
+}
