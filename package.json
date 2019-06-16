@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "dotenv": "^8.0.0",
     "gatsby": "^2.8.6",
     "gatsby-background-image": "^0.7.1",
     "gatsby-image": "^2.1.2",
@@ -13,7 +14,9 @@
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.1.3",
+    "gatsby-source-contentful": "^2.0.71",
     "gatsby-source-filesystem": "^2.0.38",
+    "gatsby-transformer-remark": "^2.4.0",
     "gatsby-transformer-sharp": "^2.1.21",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",
