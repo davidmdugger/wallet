@@ -23,7 +23,7 @@ class Card extends PureComponent {
         <div className="card-header">
           <div className="crypto-logo">
             B
-        </div>
+          </div>
           <div className="crypto-name">
             <p>Bitcoin | Currency</p>
           </div>

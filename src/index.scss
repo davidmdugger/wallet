@@ -70,3 +70,16 @@ $media-desktop: "only screen  and (min-width : 1200px)";
 
 // large screens
 $media-large-screen: "only screen  and (min-width : 1824px)";
+
+.linear-background {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 200px);
+  width: 400px;
+  height: 200px;
+  background-color: #fff;
+  border: solid 1px #fff;
+  box-shadow:
+    inset 60px 0 120px #f0f,
+    inset -60px 0 120px #0ff;
+}
